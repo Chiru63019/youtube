@@ -6,6 +6,7 @@ from pyrogram.types import Message, Document
 from pyromod import listen
 from yt_dlp import YoutubeDL
 import yt_dlp
+import sys
 
 API_ID = "21179966"
 API_HASH = "d97919fb0a3c725e8bb2a25bbb37d57c"
@@ -35,6 +36,11 @@ async def update_cookies_command(client: Client, message: Message):
     os.makedirs(cookies_folder, exist_ok=True)
     
     await message.reply_text("Please send the new `cookies.txt` file.")
+
+@app.on_message(filters.command("Stop"))
+async def restart_handler(_, m):
+    await m.reply_text("🚯 **ꜱᴛᴏᴘᴘᴇᴅ** 🚯", True)
+    os.execl(sys.executable, sys.executable, *sys.argv)
 
 @app.on_message(filters.command(["txt"]))
 async def txt_command(client: Client, message: Message):
