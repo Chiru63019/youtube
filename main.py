@@ -49,6 +49,7 @@ async def extract_command(client: Client, message: Message):
     editable = await message.reply_text("Please send the URL of the YouTube playlist.")
     input: Message = await app.listen(editable.chat.id)
     playlist_url = input.text
+    await message.reply_text("extracting...")
     video_links, playlist_name = get_video_links(playlist_url)
     if video_links:
         ex_filename = f"{playlist_name}.txt"
