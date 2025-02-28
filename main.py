@@ -291,7 +291,7 @@ async def send_video(client, message, output_file, status_message, title, thumbn
         await client.send_video(
             chat_id=message.chat.id,
             video=output_file,
-            caption=f"**╭━━━━━━━━━━━━━━━━━━━━╮\n┣⪼𝑽𝒊𝒅𝒆𝒐 𝑻𝒊𝒕𝒍𝒆 : {title}**\n┣⪼**𝕊𝕚𝕫𝕖 : {video_size_mb:.2f} MB** \n╰━━━━━━━━━━━━━━━━━━━━╯シ",  # Add the title as the caption
+            caption=f"𝑽𝒊𝒅𝒆𝒐 𝑻𝒊𝒕𝒍𝒆 : {title}",  # Add the title as the caption
             supports_streaming=True,
             height=720,
             width=1280,
