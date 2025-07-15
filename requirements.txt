@@ -1,35 +1,46 @@
-async-lru==2.0.2
-cloudscraper
-beautifulsoup4==4.9.3
-ffmpeg
-m3u8
-helper
-certifi==2023.5.7
-bs4==0.0.1
-charset-normalizer==3.1.0
-idna==3.4
-mutagen==1.46.0
-pyaes==1.6.1
-pycryptodome==3.18.0
+# Telegram & async
 Pyrogram==2.0.106
 pyromod==1.5
-PySocks==1.7.1
-python-dotenv==1.0.0
-requests==2.32.2
-soupsieve==2.4.1
-TgCrypto==1.2.5
-urllib3==2.0.3
-websockets==12.0
-yt-dlp==2024.7.25
-motor
 aiohttp==3.8.4
 aiofiles
-pytz
+websockets==12.0
+async-lru==2.0.2
+motor
 umongo==3.1.0
+
+# Downloading tools
+yt-dlp==2024.7.25
+TgCrypto==1.2.5
+pyaes==1.6.1
+pycryptodome==3.18.0
 speedtest-cli
+aria2p
+
+# Web scraping / HTML parsing
+beautifulsoup4==4.9.3
+soupsieve==2.4.1
+bs4==0.0.1
+cloudscraper
+
+# HTTP & network utils
+requests==2.32.2
+urllib3==2.0.3
+idna==3.4
+charset-normalizer==3.1.0
+PySocks==1.7.1
+certifi==2023.5.7
+
+# Media handling
+ffmpeg-python  # Python wrapper, actual ffmpeg binary needed separately
+mutagen==1.46.0
+m3u8
+
+# Web framework
 Flask==1.1.2
 gunicorn==20.1.0
 Jinja2==3.0.3
 werkzeug==2.0.2
 itsdangerous==2.0.1
 
+# Misc
+python-dotenv==1.0.0
