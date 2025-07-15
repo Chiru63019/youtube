@@ -1,10 +1,12 @@
-FROM python:3.9.6-alpine3.14
+FROM python:3.11-slim
 
 WORKDIR /app
 
 COPY . .
-RUN apk add --no-cache gcc libffi-dev musl-dev ffmpeg aria2 && pip install --no-cache-dir -r requirements.txt
-RUN pip install yt_dlp -U
+
+RUN apt update && \
+    apt install -y gcc libffi-dev ffmpeg aria2 build-essential && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir --upgrade yt_dlp
 
 CMD gunicorn app:app & python3 main.py
-
