@@ -8,9 +8,9 @@ from yt_dlp import YoutubeDL
 import yt_dlp
 import sys
 
-API_ID = "21179966"
-API_HASH = "d97919fb0a3c725e8bb2a25bbb37d57c"
-BOT_TOKEN = "7809268218:AAFKxPHO3UXeo4flSlZT3_-bOzzivL-JyP4"
+API_ID = "26468828"
+API_HASH = "4693513c08d1ac6af15f95b116c29478"
+BOT_TOKEN = "7691787880:AAFQN39ptfVyjQbKA4NXrid7AHJZbcoOwcM"
 
 app = Client("yt_downloader_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
