@@ -10,20 +10,6 @@
     "repository": "https://github.com/mohitbooraget/New_Txt_Random",
     "success_url": "https://telegram.me/imendaxpublic",
     "stack": "container",
-    "env": {
-        "API_ID": {
-            "description": "Enter your API id You can generate by https://my.telegram.org/auth",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "Enter your API Hash You can generate by https://my.telegram.org/auth",
-            "required": true
-        },
-        "BOT_TOKEN": {
-            "description": "Enter your bot token You can generate by @BotFather",
-            "required": true
-        }
-    },
     "addons": [],
     "buildpacks": [
         {
