@@ -4,9 +4,18 @@ WORKDIR /app
 
 COPY . .
 
-RUN apt update && \
-    apt install -y gcc libffi-dev ffmpeg aria2 build-essential && \
-    pip install --no-cache-dir -r requirements.txt && \
-    pip install --no-cache-dir --upgrade yt_dlp
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    libffi-dev \
+    ffmpeg \
+    aria2 \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python dependencies
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install yt_dlp -U
 
 CMD gunicorn app:app & python3 main.py
